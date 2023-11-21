@@ -1,0 +1,16 @@
+{
+  "apps": [
+    {
+      "name": "datapp_bff",
+      "script": "./build/main.js",
+      "env": {
+        "NODE_ENV": "production"
+      },
+      "watch": false,
+      "instances": 4,
+      "max_memory_restart": "2G",
+      "source_map_support": true,
+      "exec_mode": "cluster"
+    }
+  ]
+}

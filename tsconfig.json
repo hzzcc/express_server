@@ -1,0 +1,29 @@
+{
+  "extends": "ts-node/node16/tsconfig.json",
+  // Most ts-node options can be specified here using their programmatic names.
+  "ts-node": {
+    "esm": true,
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  },
+  "compilerOptions": {
+    "sourceMap": true, // allow sourcemap support
+    "strictNullChecks": true, // enable strict null checks as a best practice
+    "strict": true,
+    "target": "esnext", // specify ECMAScript target version
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "noImplicitAny": false,
+    "declaration": false,
+    "typeRoots": ["./typings", "./node_modules/@types"],
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "outDir": "./build"
+  },
+  "include": ["./src"],
+  "exclude": ["node_modules"]
+}
