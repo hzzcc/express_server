@@ -13,7 +13,7 @@ const winstonLogger: WinstonLogger = createLogger({
       // 日志信息格式化
       (info) => {
         const time = dayJs().format(LOG_TIME_FORMAT);
-        return `[datapp_bff] [pid: ${process.pid}] ${time} ${info.level.toUpperCase()} ${
+        return `[express_server] [pid: ${process.pid}] ${time} ${info.level.toUpperCase()} ${
           info.message
         }`;
       },
@@ -33,7 +33,7 @@ export const addTransportFile = (level: string) => {
   winstonLogger.add(
     new transports.File({
       level: level,
-      filename: join(LOG_PATH, 'datapp_bff.log'),
+      filename: join(LOG_PATH, 'express_server.log'),
       maxsize: 1024 * 1024 * 500, // 500M切割
     }),
   );

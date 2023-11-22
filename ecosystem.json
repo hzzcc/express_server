@@ -1,7 +1,7 @@
 {
   "apps": [
     {
-      "name": "datapp_bff",
+      "name": "express_server",
       "script": "./build/main.js",
       "env": {
         "NODE_ENV": "production"

@@ -10,7 +10,7 @@ import { HttpError } from 'http-errors';
 
 import { createApp } from './app';
 
-const debug = debugFunc('datapp_bff:server');
+const debug = debugFunc('express_server:server');
 
 async function bootstrap() {
   const app = await createApp();

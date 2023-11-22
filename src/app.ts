@@ -19,7 +19,7 @@ export async function createApp() {
   const metricsMiddleware = promBundle({
     includeMethod: true,
     customLabels: {
-      app: 'datapp_bff',
+      app: 'express_server',
       version: '1.0.0',
     },
     includePath: true,
