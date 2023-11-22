@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "preinstall": "husky install",
-    "dev": "nodemon --exec node --loader ts-node/esm src/main.ts",
+    "dev": "DEBUG=express_server:* nodemon --exec node --loader ts-node/esm src/main.ts",
     "build": "tsc",
     "build:pri": "webpack --config webpack.config.js",
     "start": "pm2 start ecosystem.json",

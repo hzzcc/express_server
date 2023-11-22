@@ -7,6 +7,7 @@
 import debugFunc from 'debug';
 import http from 'http';
 import { HttpError } from 'http-errors';
+import ip from 'ip';
 
 import { createApp } from './app';
 
@@ -90,7 +91,7 @@ async function bootstrap() {
   function onListening() {
     const addr = server.address();
     const bind = typeof addr === 'string' ? 'pipe ' + addr : 'port ' + addr?.port;
-    debug('Listening on ' + bind);
+    debug('Listening on ' + bind, `http://${ip.address()}:${port}`);
   }
 }
 
